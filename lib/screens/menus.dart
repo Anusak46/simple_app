@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Menu extends StatefulWidget{
-  const Menu({super.key});
+class Menus extends StatefulWidget{
+  const Menus({super.key});
 
   @override
-  State<Menu> createState() => _MenusState();
+  State<Menus> createState() => _MenusState();
 }
 
-class _MenusState extends State<Menu> {
+class _MenusState extends State<Menus> {
   List<String> itemes = <String>[ 
   'item 1',
   'item 2',
