@@ -30,13 +30,10 @@ class _MenusState extends State<Menus> {
           onLongPress: (){
             setState((){
               itemes.removeAt(index);
-
             });
           },
-          );
+        );
       },
-
     );
-
   }
 }

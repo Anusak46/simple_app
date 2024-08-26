@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {  
+class Home extends StatelessWidget {  
   const Home({super.key});
 
-  @override{
-    Widget build(BuildContext context){
-      return Scaffold(
-        appBar: AppBar(
-          title: const Text("Simple App"),
-        ),
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Simple App"),
+      ),
       body: Center(
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
-              onPressed: (){
+              onPressed: () {
                 print("Text Button Pressed");
               }, 
-              child: Text(
+              child: const Text(
                 "Text",
                 style: TextStyle(
                   color: Colors.deepPurple,
@@ -26,21 +26,22 @@ class Home extends StatefulWidget {
               ),
             ),
             FilledButton(
-              style:FilledButton.styleFrom(
-                backgroundColor: Colors.amber.shade100,
-                foregroundColor: Colors.brown)
+              style: FilledButton.styleFrom(
+                  backgroundColor: Colors.amber.shade100,
+                  foregroundColor: Colors.brown),
               onPressed: () {
                 print("FilledButton Pressed");
               },
-              child: Text("Filled",
+              child: const Text("Filled",
                   style: TextStyle(
                     fontSize: 20,
                   )),
-            )
+            ),
+            ElevatedButton(onPressed: () {}, child: const Text("Elevated")),
+            OutlinedButton(onPressed: () {}, child: const Text("Outlined")),
           ],
         ),
       ),
-      );
-    }
+    );
   }
 }

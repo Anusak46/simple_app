@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_app/screens/menu.dart';
+import 'package:simple_app/screens/menus.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -8,7 +8,7 @@ void main() {
       appBar: AppBar(
         title: const Text("Simple App"),
       ),
-      body: const Menu(),
+      body: const Menus(),
     ),
   ));
 }
