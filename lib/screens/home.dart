@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {  
+class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
@@ -16,10 +16,10 @@ class Home extends StatelessWidget {
             TextButton(
               onPressed: () {
                 print("Text Button Pressed");
-              }, 
+              },
               child: const Text(
                 "Text",
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.deepPurple,
                   fontSize: 20,
                 ),
@@ -37,8 +37,27 @@ class Home extends StatelessWidget {
                     fontSize: 20,
                   )),
             ),
-            ElevatedButton(onPressed: () {}, child: const Text("Elevated")),
-            OutlinedButton(onPressed: () {}, child: const Text("Outlined")),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                  foregroundColor: Colors.white,
+                  shadowColor: Colors.red,
+                  elevation: 5),
+              onPressed: () {
+                print("ElevatedButton Pressed");
+              }, 
+              child: const Text("Elevated")),
+            OutlinedButton(
+              
+              style: OutlinedButton.styleFrom(
+                  side: const BorderSide(
+                    color: Colors.red, 
+                    width: 3),
+              ),
+              onPressed: () {
+                print("OutlinedButton Pressed");
+              }, 
+              child: const Text("Outlined")),
           ],
         ),
       ),
